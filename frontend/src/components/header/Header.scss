@@ -1,0 +1,65 @@
+@use "../../styles/variables" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: $color-white;
+  border-bottom: 1px solid $color-border;
+}
+
+.header__container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $spacing-sm $spacing-lg;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: $color-dark;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+
+  list-style: none;
+}
+
+.header__menu a {
+  text-decoration: none;
+  color: $color-text;
+
+  transition: color $transition-default;
+}
+
+.header__menu a:hover {
+  color: $color-primary;
+}
+
+.header__cta {
+  padding: $spacing-sm $spacing-md;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  background: $color-primary;
+  color: $color-white;
+
+  border-radius: $radius-small;
+
+  transition: opacity $transition-default;
+}
+
+.header__cta:hover {
+  opacity: 0.9;
+}
