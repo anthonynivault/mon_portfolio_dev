@@ -20,11 +20,51 @@
 }
 
 .header__logo {
-  text-decoration: none;
-  color: $color-dark;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
 
-  font-size: 1.25rem;
+  color: $color-dark;
+}
+
+.header__logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    $color-primary,
+    $color-secondary
+  );
+
+  color: $color-white;
+
+  border-radius: $radius-small;
+
   font-weight: 700;
+}
+
+.header__logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  color: $color-dark;
+}
+
+.header__logo-dev {
+  background: linear-gradient(
+    135deg,
+    $color-primary,
+    $color-secondary
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header__menu {

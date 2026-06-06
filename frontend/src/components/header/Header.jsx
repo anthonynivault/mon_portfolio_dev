@@ -5,11 +5,24 @@ function Header() {
     <header className="header">
       <div className="header__container">
 
-        <a href="#hero" className="header__logo">Anthony Nivault</a>
+        <a href="#hero" className="header__logo">
+
+  <span className="header__logo-icon">
+    AN
+  </span>
+
+  <span className="header__logo-text">
+    Anthony
+    <span className="header__logo-dev">
+      .dev
+    </span>
+  </span>
+
+</a>
 
         <nav className="header__nav">
           <ul className="header__menu">
-            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#timeline">Parcours</a></li>
