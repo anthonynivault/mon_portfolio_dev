@@ -13,6 +13,8 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 import "../styles/Timeline.scss";
 import "../styles/Contact.scss";
 
+import { Link } from "react-router-dom";
+
 function HomePage() {
   return (
     <>
@@ -289,6 +291,7 @@ function HomePage() {
             type="text"
             id="name"
             placeholder="Votre nom"
+            required
           />
         </div>
 
@@ -301,6 +304,7 @@ function HomePage() {
             type="email"
             id="email"
             placeholder="Votre email"
+            required
           />
         </div>
 
@@ -315,9 +319,26 @@ function HomePage() {
           id="message"
           rows="6"
           placeholder="Votre message..."
+          required
         ></textarea>
       </div>
+<div className="contact__checkbox">
 
+  <input
+    type="checkbox"
+    id="privacy"
+    required
+  />
+
+  <label htmlFor="privacy">
+    J'accepte que mes données soient utilisées
+    afin de répondre à ma demande conformément à la{" "}
+    <Link to="/confidentialite">
+      politique de confidentialité
+    </Link>.
+  </label>
+
+</div>
       <button
         type="submit"
         className="contact__button"

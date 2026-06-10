@@ -129,6 +129,43 @@
   opacity: 0.9;
 }
 
+.contact__checkbox {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+
+  margin: 1.5rem 0;
+
+  text-align: left;
+}
+
+.contact__checkbox input {
+  margin-top: 0.2rem;
+
+  cursor: pointer;
+}
+
+.contact__checkbox label {
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+
+  color: $color-text;
+}
+
+.contact__checkbox a {
+  color: $color-primary;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.contact__checkbox a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .contact__row {
     grid-template-columns: 1fr;

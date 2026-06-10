@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+.legal-notice {
+  padding: 6rem 0;
+}
+
+.legal-notice__container {
+  max-width: 800px;
+
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.legal-notice__back {
+  display: inline-block;
+
+  margin-bottom: 2rem;
+
+  color: $color-text;
+  text-decoration: none;
+
+  font-size: 0.95rem;
+}
+
+.legal-notice h1 {
+  margin-bottom: 3rem;
+
+  font-size: 3rem;
+  font-weight: 700;
+
+  color: $color-dark;
+}
+
+.legal-notice section {
+  margin-bottom: 3rem;
+}
+
+.legal-notice h2 {
+  margin-bottom: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  color: $color-dark;
+}
+
+.legal-notice p {
+  margin-bottom: 1rem;
+
+  line-height: 1.8;
+
+  color: $color-text;
+}

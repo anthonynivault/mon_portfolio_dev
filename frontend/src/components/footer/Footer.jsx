@@ -1,4 +1,5 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -54,13 +55,27 @@ function Footer() {
 
   <div className="footer__column">
 
-    <h3>Informations</h3>
+  <h3>
+    Informations
+  </h3>
 
-    <a href="#">
-      Mentions légales
-    </a>
+  <ul>
 
-  </div>
+    <li>
+      <Link to="/mentions-legales">
+        Mentions légales
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/confidentialite">
+        Politique de confidentialité
+      </Link>
+    </li>
+
+  </ul>
+
+</div>
 
 </div>
 

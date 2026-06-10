@@ -1,0 +1,67 @@
+@use "./variables" as *;
+
+.not-found {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: $spacing-lg;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(37, 99, 235, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(124, 58, 237, 0.12),
+      transparent 40%
+    );
+}
+
+.not-found__content h1 {
+  margin-bottom: 1rem;
+
+  font-size: 7rem;
+  font-weight: 700;
+
+  color: $color-dark;
+}
+
+.not-found__content h2 {
+  margin-bottom: 1rem;
+
+  color: $color-dark;
+}
+
+.not-found__content p {
+  margin-bottom: 2rem;
+
+  color: $color-text;
+}
+
+.not-found__button {
+  display: inline-block;
+
+  padding: 1rem 2rem;
+
+  background: $color-primary;
+  color: $color-white;
+
+  border-radius: $radius-small;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: opacity 0.3s ease;
+}
+
+.not-found__button:hover {
+  opacity: 0.9;
+}
