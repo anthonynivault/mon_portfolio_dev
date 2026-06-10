@@ -1,0 +1,403 @@
+[
+  {
+    "id": 1,
+    "slug": "booki",
+
+    "title": "Booki",
+
+    "image": "booki.webp",
+
+    "gallery": [
+      "booki.webp"
+    ],
+
+    "featured": false,
+
+    "description": "Intégration responsive de la page d'accueil d'une plateforme de réservation d'hébergements et d'activités à partir de maquettes Figma.",
+
+    "context": "Premier projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était d'intégrer fidèlement une maquette fournie en respectant les contraintes responsive et les bonnes pratiques HTML et CSS.",
+
+    "challenge": "Créer une interface responsive compatible desktop, tablette et mobile à partir de maquettes Figma tout en respectant la structure de code imposée par le projet.",
+
+    "solution": "Utilisation de HTML5 sémantique, CSS3, Flexbox et Media Queries pour construire une interface fidèle aux maquettes et adaptée à toutes les tailles d'écran.",
+
+    "results": [
+      "Intégration complète de la page d'accueil",
+      "Affichage responsive desktop, tablette et mobile",
+      "Structure HTML sémantique",
+      "Versionnement du projet avec Git et GitHub"
+    ],
+
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Flexbox",
+      "Responsive Design",
+      "Git",
+      "GitHub"
+    ],
+
+    "skills": [
+      "Intégration web",
+      "Responsive Design",
+      "HTML sémantique",
+      "Organisation CSS",
+      "Versionnement Git"
+    ],
+
+    "learnings": [
+      "Intégrer une maquette Figma",
+      "Créer une interface responsive",
+      "Utiliser Flexbox efficacement",
+      "Structurer un projet front-end",
+      "Utiliser Git et GitHub dans un workflow de développement"
+    ],
+
+    "github": "https://github.com/anthonynivault/booki",
+
+    "demo": "https://anthonynivault.github.io/booki/"
+  },
+
+  {
+  "id": 2,
+
+  "slug": "sophie-bluel",
+
+  "title": "Sophie Bluel",
+
+  "image": "sophie-bluel.webp",
+
+  "gallery": [
+    "sophie-bluel.webp"
+  ],
+
+  "featured": false,
+
+  "description": "Développement d'un portfolio dynamique pour une architecte d'intérieur avec JavaScript et intégration d'une API REST.",
+
+  "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était de transformer un site statique en application dynamique en manipulant le DOM et en communiquant avec une API.",
+
+  "challenge": "Développer des fonctionnalités dynamiques en JavaScript natif, gérer l'authentification administrateur et permettre l'ajout de nouveaux médias via une modale connectée à une API.",
+
+  "solution": "Mise en place de requêtes HTTP vers l'API, création d'un système de filtrage dynamique des projets, développement d'une page de connexion administrateur et d'une interface de gestion des médias.",
+
+  "results": [
+    "Affichage dynamique des projets depuis l'API",
+    "Filtrage des réalisations par catégorie",
+    "Authentification administrateur avec token",
+    "Création d'une galerie administrable",
+    "Ajout et suppression de médias via une modale"
+  ],
+
+  "technologies": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "API REST",
+    "Git",
+    "GitHub"
+  ],
+
+  "skills": [
+    "Manipulation du DOM",
+    "Gestion des événements",
+    "Requêtes HTTP",
+    "Authentification utilisateur",
+    "Gestion des formulaires",
+    "Architecture front-end"
+  ],
+
+  "learnings": [
+    "Communiquer avec une API REST",
+    "Manipuler le DOM dynamiquement",
+    "Gérer les événements utilisateurs",
+    "Créer une authentification front-end",
+    "Développer une interface d'administration"
+  ],
+
+  "github": "https://github.com/anthonynivault/Portfolio-architecte-sophie-bluel",
+
+  "demo": null
+},
+
+{
+  "id": 3,
+  "slug": "nina-carducci",
+
+  "title": "Nina Carducci",
+
+  "image": "nina-carducci.webp",
+
+  "gallery": [
+    "nina-carducci.webp"
+  ],
+
+  "featured": true,
+
+  "description": "Optimisation des performances, du SEO et de l'accessibilité d'un site de photographe, avec correction de bugs JavaScript.",
+
+  "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. La mission consistait à intervenir sur le site d'une photographe afin d'améliorer sa visibilité, ses performances, son accessibilité et son référencement local.",
+
+  "challenge": "Identifier les problèmes de performance, de référencement et d'accessibilité du site, puis corriger plusieurs bugs liés à la galerie d'images et au système de filtres.",
+
+  "solution": "Réalisation d'audits avec Lighthouse et WAVE, optimisation des images, amélioration de la structure HTML, ajout de métadonnées SEO et Open Graph, intégration de données structurées Schema.org et correction des bugs JavaScript.",
+
+  "results": [
+    "Amélioration des performances du site",
+    "Optimisation du référencement naturel",
+    "Mise en place du référencement local avec Schema.org",
+    "Ajout des métadonnées pour les réseaux sociaux",
+    "Amélioration de l'accessibilité",
+    "Correction de la navigation dans la modale",
+    "Correction de l'affichage du filtre actif",
+    "Rédaction d'un rapport d'intervention avant/après"
+  ],
+
+  "technologies": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "SEO",
+    "Accessibilité",
+    "Lighthouse",
+    "WAVE"
+  ],
+
+  "skills": [
+    "Optimisation des performances",
+    "Référencement naturel",
+    "Accessibilité web",
+    "Debugging JavaScript",
+    "Audit Lighthouse",
+    "Audit WAVE",
+    "Données structurées Schema.org"
+  ],
+
+  "learnings": [
+    "Analyser les performances d'un site existant",
+    "Identifier et corriger des bugs avec Chrome DevTools",
+    "Optimiser les images pour améliorer le chargement",
+    "Améliorer le SEO technique d'un site",
+    "Mettre en place des balises Open Graph",
+    "Rédiger un rapport d'optimisation professionnel"
+  ],
+
+  "github": "https://github.com/anthonynivault/Nina-Carducci-Dev",
+
+  "demo": "https://anthonynivault.github.io/Nina-Carducci-Dev/"
+},
+
+{
+  "id": 4,
+
+  "slug": "kasa",
+
+  "title": "Kasa",
+
+  "image": "kasa.webp",
+
+  "gallery": [
+    "kasa.webp"
+  ],
+
+  "featured": true,
+
+  "description": "Développement d'une application web de location immobilière avec React, React Router et Sass à partir de maquettes Figma.",
+
+  "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était de développer le front-end complet d'une plateforme de location immobilière moderne en utilisant React et React Router.",
+
+  "challenge": "Construire une application monopage performante en React, mettre en place le routage dynamique des logements et développer plusieurs composants réutilisables conformément aux maquettes fournies.",
+
+  "solution": "Création d'une architecture par composants avec React, mise en place du routage avec React Router, utilisation de données JSON simulées et développement de composants interactifs comme le carrousel d'images et les menus déroulants.",
+
+  "results": [
+    "Application React entièrement fonctionnelle",
+    "Navigation entre plusieurs pages avec React Router",
+    "Gestion des routes dynamiques par identifiant de logement",
+    "Page d'erreur 404 personnalisée",
+    "Carrousel d'images avec navigation circulaire",
+    "Menus déroulants animés",
+    "Interface responsive conforme aux maquettes"
+  ],
+
+  "technologies": [
+    "React",
+    "React Router",
+    "JavaScript",
+    "Sass",
+    "Vite",
+    "Node.js",
+    "Git",
+    "GitHub"
+  ],
+
+  "skills": [
+    "Architecture par composants",
+    "React Hooks",
+    "React Router",
+    "Gestion des routes dynamiques",
+    "Développement SPA",
+    "Sass",
+    "Responsive Design"
+  ],
+
+  "learnings": [
+    "Initialiser un projet avec Vite",
+    "Créer des composants réutilisables",
+    "Configurer le routage avec React Router",
+    "Structurer une application React",
+    "Gérer les erreurs de navigation",
+    "Mettre en œuvre des animations CSS"
+  ],
+
+  "github": "https://github.com/anthonynivault/kasa",
+
+  "demo": null
+},
+
+{
+  "id": 5,
+
+  "slug": "mon-vieux-grimoire",
+
+  "title": "Mon Vieux Grimoire",
+
+  "image": "mon-vieux-grimoire.webp",
+
+  "gallery": [
+    "mon-vieux-grimoire.webp"
+  ],
+
+  "featured": true,
+
+  "description": "Développement d'une API REST sécurisée pour une plateforme de notation de livres avec Node.js, Express et MongoDB.",
+
+  "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était de développer l'intégralité du back-end d'une application de notation de livres et de l'interfacer avec un front-end React fourni.",
+
+  "challenge": "Concevoir une API sécurisée permettant la gestion des utilisateurs, des livres et des notations tout en respectant les bonnes pratiques de sécurité, d'architecture et de Green Code.",
+
+  "solution": "Développement d'une API REST avec Node.js et Express, modélisation des données avec MongoDB et Mongoose, mise en place d'une authentification JWT, sécurisation des mots de passe avec bcrypt et optimisation des images avec Sharp.",
+
+  "results": [
+    "API REST complète conforme aux spécifications",
+    "Authentification sécurisée avec JWT",
+    "Hashage des mots de passe avec bcrypt",
+    "Gestion des opérations CRUD sur les livres",
+    "Système de notation et calcul automatique des moyennes",
+    "Stockage des données dans MongoDB Atlas",
+    "Optimisation automatique des images avec Sharp",
+    "Architecture MVC",
+    "Respect des bonnes pratiques Green Code"
+  ],
+
+  "technologies": [
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+    "bcrypt",
+    "Sharp",
+    "REST API",
+    "Git",
+    "GitHub"
+  ],
+
+  "skills": [
+    "Développement back-end",
+    "Conception d'API REST",
+    "Architecture MVC",
+    "Authentification JWT",
+    "Sécurisation des données",
+    "Modélisation MongoDB",
+    "Gestion des fichiers",
+    "Optimisation des performances"
+  ],
+
+  "learnings": [
+    "Créer un serveur Express",
+    "Connecter une application à MongoDB Atlas",
+    "Implémenter des opérations CRUD sécurisées",
+    "Mettre en place une authentification avec JWT",
+    "Gérer l'upload et l'optimisation d'images",
+    "Structurer un projet selon l'architecture MVC",
+    "Appliquer les bonnes pratiques Green Code"
+  ],
+
+  "github": "https://github.com/anthonynivault/mon_vieux_grimoire_backend",
+
+  "demo": null
+},
+
+{
+  "id": 6,
+
+  "slug": "menumaker-qwenta",
+
+  "title": "MenuMaker by Qwenta",
+
+  "image": "menumaker.webp",
+
+  "gallery": [
+    "menumaker.webp"
+  ],
+
+  "featured": false,
+
+  "description": "Planification complète du développement d'une application web de création de menus pour restaurateurs, incluant veille technologique, spécifications techniques et gestion de projet Agile.",
+
+  "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. La mission consistait à préparer l'ensemble du développement d'une application avant sa phase de production.",
+
+  "challenge": "Transformer des besoins fonctionnels et des User Stories en spécifications techniques détaillées et en tâches de développement exploitables par une équipe front-end et back-end.",
+
+  "solution": "Réalisation d'une veille technologique, rédaction d'un document de spécifications techniques, choix des technologies, découpage des fonctionnalités en tâches techniques et création d'un Sprint Backlog complet dans Notion.",
+
+  "results": [
+    "Rédaction des spécifications techniques du projet",
+    "Analyse des besoins fonctionnels",
+    "Mise en place d'une veille technologique",
+    "Création d'un tableau Kanban complet",
+    "Découpage des User Stories en tâches techniques",
+    "Estimation des tâches en Story Points",
+    "Organisation du projet selon une approche Agile"
+  ],
+
+  "technologies": [
+    "Notion",
+    "Kanban",
+    "Agile",
+    "Scrum",
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Feedly"
+  ],
+
+  "skills": [
+    "Gestion de projet",
+    "Analyse fonctionnelle",
+    "Rédaction de spécifications techniques",
+    "Méthodologie Agile",
+    "Planification de Sprint",
+    "Découpage fonctionnel",
+    "Veille technologique"
+  ],
+
+  "learnings": [
+    "Transformer des besoins métiers en tâches techniques",
+    "Rédiger des spécifications techniques",
+    "Estimer la complexité avec les Story Points",
+    "Utiliser un outil Kanban",
+    "Mettre en place une veille technologique structurée",
+    "Présenter une solution technique à un client"
+  ],
+
+  "github": null,
+
+  "demo": null,
+
+  "externalLink": "https://silken-lead-58b.notion.site/Sprint-Backlog-36f34d9812c580f88c49f077cb843f1c"
+}
+
+
+]

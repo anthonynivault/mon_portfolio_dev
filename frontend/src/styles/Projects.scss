@@ -1,0 +1,52 @@
+@use "./variables" as *;
+
+.projects {
+  padding: 6rem 0;
+
+  background: $color-light;
+}
+
+.projects__container {
+  max-width: $container-width;
+
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  text-align: center;
+}
+
+.projects__label {
+  display: block;
+
+  margin-bottom: $spacing-sm;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: $color-accent;
+}
+
+.projects__title {
+  margin-bottom: 1rem;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: $color-dark;
+}
+
+.projects__subtitle {
+  margin-bottom: 3rem;
+
+  color: $color-text;
+}
+
+.projects__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
+}

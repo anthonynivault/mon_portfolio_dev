@@ -1,10 +1,17 @@
 import Header from "../components/header/Header";
+import "../styles/Skills.scss";
 import Footer from "../components/footer/Footer";
 import "../styles/About.scss";
-
 import "../styles/Hero.scss";
 
 import photo from "../assets/images/anthony.webp";
+
+import "../styles/Projects.scss";
+
+import projects from "../data/projects.json";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import "../styles/Timeline.scss";
+import "../styles/Contact.scss";
 
 function HomePage() {
   return (
@@ -103,21 +110,225 @@ function HomePage() {
   </div>
 </section>
 
-        <section id="skills">
-          <h2>Compétences</h2>
-        </section>
+        <section id="skills" className="skills">
+  <div className="skills__container">
+    <span className="skills__label">COMPÉTENCES</span>
 
-        <section id="projects">
-          <h2>Projets</h2>
-        </section>
+    <h2 className="skills__title">Stack technique</h2>
 
-        <section id="timeline">
-          <h2>Parcours</h2>
-        </section>
+    <div className="skills__grid">
+      <article className="skills__card">
+        <div className="skills__icon">{"</>"}</div>
+        <h3>Front-end</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript ES6+</li>
+          <li>React</li>
+          <li>Sass</li>
+          <li>Responsive Design</li>
+        </ul>
+      </article>
 
-        <section id="contact">
-          <h2>Contact</h2>
-        </section>
+      <article className="skills__card">
+        <div className="skills__icon">▣</div>
+        <h3>Back-end</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>API REST</li>
+          <li>JWT</li>
+          <li>Authentification</li>
+        </ul>
+      </article>
+
+      <article className="skills__card">
+        <div className="skills__icon">◎</div>
+        <h3>Base de données</h3>
+        <ul>
+          <li>MongoDB</li>
+          <li>Mongoose</li>
+          <li>Modélisation</li>
+        </ul>
+      </article>
+
+      <article className="skills__card">
+        <div className="skills__icon">⚙</div>
+        <h3>Outils & qualité</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Lighthouse</li>
+          <li>SEO</li>
+          <li>Accessibilité</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+        <section id="projects" className="projects">
+  <div className="projects__container">
+
+    <span className="projects__label">
+      PROJETS
+    </span>
+
+    <h2 className="projects__title">
+      Sélection de réalisations
+    </h2>
+
+    <p className="projects__subtitle">
+      Cinq projets professionnalisants couvrant
+      l'intégration, l'optimisation et le full-stack.
+    </p>
+
+    <div className="projects__grid">
+  {projects.map((project) => (
+    <ProjectCard
+      key={project.id}
+      project={project}
+    />
+  ))}
+</div>
+
+  </div>
+</section>
+
+        <section id="timeline" className="timeline">
+  <div className="timeline__container">
+
+    <span className="timeline__label">
+      PARCOURS
+    </span>
+
+    <h2 className="timeline__title">
+      Mon évolution
+    </h2>
+
+    <div className="timeline__list">
+
+      <article className="timeline__card">
+        <span className="timeline__year">2025 - 2026</span>
+
+        <h3>
+          Formation Développeur Web — OpenClassrooms
+        </h3>
+
+        <p>
+          Formation professionnalisante couvrant
+          HTML, CSS, JavaScript, React, Node.js,
+          Express, MongoDB, SEO, accessibilité
+          et gestion de projet.
+        </p>
+      </article>
+
+      <article className="timeline__card">
+        <span className="timeline__year">2026</span>
+
+        <h3>
+          6 projets professionnalisants réalisés
+        </h3>
+
+        <p>
+          Réalisation de projets front-end,
+          back-end et full stack :
+          Booki, Sophie Bluel, Nina Carducci,
+          Kasa, Mon Vieux Grimoire et Qwenta.
+        </p>
+      </article>
+
+      <article className="timeline__card">
+        <span className="timeline__year">
+          Aujourd'hui
+        </span>
+
+        <h3>
+          Développeur Web Full Stack
+        </h3>
+
+        <p>
+          Recherche d'un premier poste afin
+          de mettre en pratique mes compétences
+          et continuer à progresser sur des
+          projets concrets.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+        <section id="contact" className="contact">
+  <div className="contact__container">
+
+    <span className="contact__label">
+      CONTACT
+    </span>
+
+    <h2 className="contact__title">
+      Travaillons ensemble
+    </h2>
+
+    <p className="contact__subtitle">
+      Une opportunité, une question ou simplement envie
+      d'échanger ? N'hésitez pas à me contacter.
+    </p>
+
+    <form className="contact__form">
+
+      <div className="contact__row">
+
+        <div className="contact__field">
+          <label htmlFor="name">
+            Nom
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Votre nom"
+          />
+        </div>
+
+        <div className="contact__field">
+          <label htmlFor="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Votre email"
+          />
+        </div>
+
+      </div>
+
+      <div className="contact__field">
+        <label htmlFor="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          rows="6"
+          placeholder="Votre message..."
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="contact__button"
+      >
+        Envoyer le message
+      </button>
+
+    </form>
+
+  </div>
+</section>
       </main>
 
       <Footer />

@@ -1,0 +1,102 @@
+@use "./variables" as *;
+
+.skills {
+  padding: 6rem 0;
+  background: $color-white;
+}
+
+.skills__container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  text-align: center;
+}
+
+.skills__label {
+  display: block;
+  margin-bottom: $spacing-sm;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: $color-accent;
+}
+
+.skills__title {
+  margin-bottom: $spacing-xl;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: $color-dark;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+}
+
+.skills__card {
+  padding: $spacing-lg;
+
+  text-align: left;
+
+  background: $color-white;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-medium;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.skills__icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: $spacing-md;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-white;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+
+  border-radius: $radius-medium;
+
+  font-weight: 700;
+}
+
+.skills__card h3 {
+  margin-bottom: $spacing-sm;
+
+  font-size: 1.1rem;
+  color: $color-dark;
+}
+
+.skills__card li {
+  position: relative;
+
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+
+  color: $color-text;
+  font-size: 0.95rem;
+}
+
+.skills__card li::before {
+  content: "";
+  position: absolute;
+
+  top: 0.55rem;
+  left: 0;
+
+  width: 5px;
+  height: 5px;
+
+  background: $color-accent;
+  border-radius: 50%;
+}
