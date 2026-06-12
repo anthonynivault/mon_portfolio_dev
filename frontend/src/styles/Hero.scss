@@ -70,6 +70,8 @@
   line-height: 1.7;
 
   color: $color-text;
+
+  text-align: justify;
 }
 
 .hero__button {
@@ -104,7 +106,7 @@
 
 .hero__visual img {
   width: 350px;
-  height: 350px;
+  height: 410px;
 
   object-fit: cover;
 
@@ -151,4 +153,61 @@
   font-weight: 400;
 
   color: $color-text;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-top: $spacing-xl;
+}
+
+.hero__button {
+  margin-top: 0;
+}
+
+.hero__github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: $spacing-sm $spacing-lg;
+
+  background: $color-light;
+  color: $color-dark;
+
+  border: 1px solid $color-border;
+  border-radius: $radius-small;
+
+  font-weight: 600;
+
+  transition: all $transition-default;
+}
+
+.hero__github-button:hover {
+  background: $color-accent;
+  color: $color-white;
+
+  border-color: $color-accent;
+
+  transform: translateY(-2px);
+}
+
+.hero__github-button:hover svg {
+  color: $color-white;
+}
+
+.hero__github-button svg {
+  font-size: 1.2rem;
+}
+
+.hero__button,
+.hero__github-button {
+  min-width: 180px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }

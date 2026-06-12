@@ -15,6 +15,17 @@ import "../styles/Contact.scss";
 
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faCode,
+  faServer,
+  faDatabase,
+  faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 function HomePage() {
   return (
     <>
@@ -37,12 +48,24 @@ function HomePage() {
                 Express et MongoDB.
               </p>
 
-              <a
-                href="#projects"
-                className="hero__button"
-              >
-                Voir mes projets
-              </a>
+              <div className="hero__actions">
+  <a
+    href="#projects"
+    className="hero__button"
+  >
+    Voir mes projets
+  </a>
+
+  <a
+    href="https://github.com/anthonynivault"
+    target="_blank"
+    rel="noreferrer"
+    className="hero__github-button"
+  >
+    <FontAwesomeIcon icon={faGithub} />
+    GitHub
+  </a>
+</div>
 
             </div>
 
@@ -120,7 +143,9 @@ function HomePage() {
 
     <div className="skills__grid">
       <article className="skills__card">
-        <div className="skills__icon">{"</>"}</div>
+        <div className="skills__icon">
+          <FontAwesomeIcon icon={faCode} />
+        </div>
         <h3>Front-end</h3>
         <ul>
           <li>HTML5</li>
@@ -133,7 +158,9 @@ function HomePage() {
       </article>
 
       <article className="skills__card">
-        <div className="skills__icon">▣</div>
+        <div className="skills__icon">
+  <FontAwesomeIcon icon={faServer} />
+</div>
         <h3>Back-end</h3>
         <ul>
           <li>Node.js</li>
@@ -145,7 +172,9 @@ function HomePage() {
       </article>
 
       <article className="skills__card">
-        <div className="skills__icon">◎</div>
+        <div className="skills__icon">
+          <FontAwesomeIcon icon={faDatabase} />
+        </div>
         <h3>Base de données</h3>
         <ul>
           <li>MongoDB</li>
@@ -155,7 +184,9 @@ function HomePage() {
       </article>
 
       <article className="skills__card">
-        <div className="skills__icon">⚙</div>
+        <div className="skills__icon">
+  <FontAwesomeIcon icon={faScrewdriverWrench} />
+</div>
         <h3>Outils & qualité</h3>
         <ul>
           <li>Git & GitHub</li>
@@ -177,13 +208,13 @@ function HomePage() {
     </span>
 
     <h2 className="projects__title">
-      Sélection de réalisations
-    </h2>
+  Sélection de réalisations
+</h2>
 
-    <p className="projects__subtitle">
-      Cinq projets professionnalisants couvrant
-      l'intégration, l'optimisation et le full-stack.
-    </p>
+<p className="projects__subtitle">
+  Une sélection de projets illustrant mon parcours
+  et l'évolution de mes compétences en développement web.
+</p>
 
     <div className="projects__grid">
   {projects.map((project) => (
@@ -226,19 +257,22 @@ function HomePage() {
       </article>
 
       <article className="timeline__card">
-        <span className="timeline__year">2026</span>
+  <span className="timeline__year">
+    2026
+  </span>
 
-        <h3>
-          6 projets professionnalisants réalisés
-        </h3>
+  <h3>
+    Plusieurs projets professionnalisants réalisés
+  </h3>
 
-        <p>
-          Réalisation de projets front-end,
-          back-end et full stack :
-          Booki, Sophie Bluel, Nina Carducci,
-          Kasa, Mon Vieux Grimoire et Qwenta.
-        </p>
-      </article>
+  <p>
+    Réalisation de projets front-end,
+    back-end et full stack :
+    Booki, Sophie Bluel, Nina Carducci,
+    Kasa, Mon Vieux Grimoire, Qwenta
+    et d'autres projets personnels.
+  </p>
+</article>
 
       <article className="timeline__card">
         <span className="timeline__year">

@@ -53,21 +53,22 @@
 }
 
 .skills__icon {
-  width: 48px;
-  height: 48px;
-
-  margin-bottom: $spacing-md;
-
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  color: $color-white;
-  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  width: 60px;
+  height: 60px;
 
-  border-radius: $radius-medium;
+  margin-bottom: 1.5rem;
 
-  font-weight: 700;
+  font-size: 1.5rem;
+
+  color: $color-primary;
+
+  background: rgba(37, 99, 235, 0.08);
+
+  border-radius: 16px;
 }
 
 .skills__card h3 {

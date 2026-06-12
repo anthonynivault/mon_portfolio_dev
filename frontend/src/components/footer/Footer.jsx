@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer__container">
 
-        <div className="footer__brand">
+        <div className="footer__column">
 
           <a
-            href="/"
-            className="footer__logo"
-          >
-            <span className="footer__logo-square"></span>
+  href="/"
+  className="footer__logo"
+>
+  <span className="footer__logo-square"></span>
 
-            Anthony
-            <span className="footer__logo-dev">
-              .dev
-            </span>
-          </a>
+  <span>
+    Anthony<span className="footer__logo-dev">.dev</span>
+  </span>
+</a>
 
           <p>
             Développeur Web Full Stack.
@@ -29,63 +29,61 @@ function Footer() {
 
         </div>
 
-        <div className="footer__links">
+        <div className="footer__column">
 
-  <div className="footer__column">
+          <h3>Informations</h3>
 
-    <h3>Me suivre</h3>
+          <ul>
 
-    <a
-      href="https://github.com/anthonynivault"
-      target="_blank"
-      rel="noreferrer"
-    >
-      GitHub
-    </a>
+            <li>
+              <Link to="/mentions-legales">
+                Mentions légales
+              </Link>
+            </li>
 
-    <a
-      href="https://www.linkedin.com/in/TON-PROFIL"
-      target="_blank"
-      rel="noreferrer"
-    >
-      LinkedIn
-    </a>
+            <li>
+              <Link to="/confidentialite">
+                Politique de confidentialité
+              </Link>
+            </li>
 
-  </div>
+          </ul>
 
-  <div className="footer__column">
+        </div>
 
-  <h3>
-    Informations
-  </h3>
+        <div className="footer__column">
 
-  <ul>
+          <h3>Me suivre</h3>
 
-    <li>
-      <Link to="/mentions-legales">
-        Mentions légales
-      </Link>
-    </li>
+          <a
+            href="https://github.com/anthonynivault"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
 
-    <li>
-      <Link to="/confidentialite">
-        Politique de confidentialité
-      </Link>
-    </li>
+          <a
+            href="https://www.linkedin.com/in/anthonynivault"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
 
-  </ul>
-
-</div>
-
-</div>
+        </div>
 
       </div>
 
+      
+
       <div className="footer__bottom">
+
         <p>
           © 2026 Anthony Nivault — Développeur Web Full Stack.
           Tous droits réservés.
         </p>
+
       </div>
 
     </footer>
