@@ -2,54 +2,43 @@
 
 .not-found {
   min-height: calc(98vh - 72px);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: $spacing-lg;
-
   text-align: center;
-}
 
-.not-found__content h1 {
-  margin-bottom: 1rem;
+  &__content {
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 7rem;
+      font-weight: 700;
+      color: $color-dark;
+    }
 
-  font-size: 7rem;
-  font-weight: 700;
+    h2 {
+      margin-bottom: 1rem;
+      color: $color-dark;
+    }
 
-  color: $color-dark;
-}
+    p {
+      margin-bottom: 2rem;
+      color: $color-text;
+    }
+  }
 
-.not-found__content h2 {
-  margin-bottom: 1rem;
+  &__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: $color-primary;
+    color: $color-white;
+    border-radius: $radius-small;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
 
-  color: $color-dark;
-}
-
-.not-found__content p {
-  margin-bottom: 2rem;
-
-  color: $color-text;
-}
-
-.not-found__button {
-  display: inline-block;
-
-  padding: 1rem 2rem;
-
-  background: $color-primary;
-  color: $color-white;
-
-  border-radius: $radius-small;
-
-  text-decoration: none;
-
-  font-weight: 600;
-
-  transition: opacity 0.3s ease;
-}
-
-.not-found__button:hover {
-  opacity: 0.9;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 }
