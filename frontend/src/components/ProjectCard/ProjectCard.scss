@@ -77,54 +77,49 @@
     align-items: center;
     gap: 0.75rem;
     margin-top: 1rem;
+  }
 
-    .project-card__button,
-    .project-card__details {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.55rem 0.85rem;
+  &__button,
+  &__details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: $radius-medium;
+    transition: all $transition-default;
+
+    svg {
       font-size: 0.8rem;
-      font-weight: 600;
-      transition: all $transition-default;
     }
+  }
 
-    .project-card__button {
-      background: $color-light;
-      color: $color-dark;
-      border: 1px solid $color-border;
-      border-radius: $radius-medium;
+  &__button {
+    background: $color-light;
+    color: $color-dark;
+    border: 1px solid $color-border;
 
-      &:hover {
-        background: $color-accent;
-        color: $color-white;
-        border-color: $color-accent;
-        transform: translateY(-2px);
-
-        svg {
-          color: $color-white;
-        }
-      }
-
-      svg {
-        font-size: 0.8rem;
-      }
-    }
-
-    .project-card__details {
-      margin-left: auto;
-      background: $color-primary;
+    &:hover {
+      background: $color-accent;
       color: $color-white;
-      border-radius: $radius-medium;
-
-      &:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-      }
+      border-color: $color-accent;
+      transform: translateY(-2px);
 
       svg {
-        font-size: 0.8rem;
+        color: $color-white;
       }
+    }
+  }
+
+  &__details {
+    margin-left: auto;
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
     }
   }
 }
