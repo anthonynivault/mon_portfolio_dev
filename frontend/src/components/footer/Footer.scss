@@ -45,13 +45,13 @@
 }
 
 .footer__column a {
-  color: $color-text;
+  color: #6b7280;
 
   transition: color $transition-default;
 }
 
 .footer__column a:hover {
-  color: $color-primary;
+  color: $color-dark;
 }
 
 .footer__logo {

@@ -5,28 +5,34 @@ import ProjectDetails from "../pages/ProjectDetails";
 import NotFound from "../pages/NotFound";
 import LegalNotice from "../pages/LegalNotice";
 import PolitiqueConfidentialite from "../pages/PolitiqueConfidentialite";
+import RootLayout from "../layouts/RootLayout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/projets/:slug",
+        element: <ProjectDetails />,
+      },
+      {
+        path: "/mentions-legales",
+        element: <LegalNotice />,
+      },
+      {
+        path: "/politique-de-confidentialite",
+        element: <PolitiqueConfidentialite />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
   },
-  {
-    path: "/projets/:slug",
-    element: <ProjectDetails />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-  {
-    path: "/mentions-legales",
-    element: <LegalNotice />,
-  },
-  {
-  path: "/confidentialite",
-  element: <PolitiqueConfidentialite />,
-},
 ]);
 
 export default router;

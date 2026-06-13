@@ -1,5 +1,18 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 function Footer() {
   return (
@@ -9,16 +22,20 @@ function Footer() {
 
         <div className="footer__column">
 
-          <a
-  href="/"
+          <Link
+  to="/"
   className="footer__logo"
+  onClick={scrollToTop}
 >
-  <span className="footer__logo-square"></span>
+            <span className="footer__logo-square"></span>
 
-  <span>
-    Anthony<span className="footer__logo-dev">.dev</span>
-  </span>
-</a>
+            <span>
+              Anthony
+              <span className="footer__logo-dev">
+                .dev
+              </span>
+            </span>
+          </Link>
 
           <p>
             Développeur Web Full Stack.
@@ -34,19 +51,23 @@ function Footer() {
           <h3>Informations</h3>
 
           <ul>
+<li>
+  <Link
+    to="/mentions-legales"
+    onClick={scrollToTop}
+  >
+    Mentions légales
+  </Link>
+</li>
 
-            <li>
-              <Link to="/mentions-legales">
-                Mentions légales
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/confidentialite">
-                Politique de confidentialité
-              </Link>
-            </li>
-
+<li>
+  <Link
+    to="/politique-de-confidentialite"
+    onClick={scrollToTop}
+  >
+    Politique de confidentialité
+  </Link>
+</li>
           </ul>
 
         </div>
@@ -56,26 +77,28 @@ function Footer() {
           <h3>Me suivre</h3>
 
           <a
-            href="https://github.com/anthonynivault"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
+  href="https://github.com/anthonynivault"
+  target="_blank"
+  rel="noreferrer"
+  className="footer__social-link"
+>
+  <FontAwesomeIcon icon={faGithub} />
+  GitHub
+</a>
 
-          <a
-            href="https://www.linkedin.com/in/anthonynivault"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
+<a
+  href="https://www.linkedin.com/in/anthonynivault"
+  target="_blank"
+  rel="noreferrer"
+  className="footer__social-link"
+>
+  <FontAwesomeIcon icon={faLinkedin} />
+  LinkedIn
+</a>
 
         </div>
 
       </div>
-
-      
 
       <div className="footer__bottom">
 

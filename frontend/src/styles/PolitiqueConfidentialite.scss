@@ -1,17 +1,17 @@
 @use "./variables" as *;
 
-.legal-notice {
+.legal-page {
   padding: 6rem 0;
 }
 
-.legal-notice__container {
+.legal-page__container {
   max-width: 800px;
 
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.legal-notice__back {
+.legal-page__back {
   display: inline-flex;
   align-items: center;
 
@@ -29,13 +29,13 @@
   transition: all $transition-default;
 }
 
-.legal-notice__back:hover {
+.legal-page__back:hover {
   color: $color-dark;
 
   transform: translateX(-3px);
 }
 
-.legal-notice h1 {
+.legal-page h1 {
   margin-bottom: 3rem;
 
   font-size: 3rem;
@@ -44,11 +44,11 @@
   color: $color-dark;
 }
 
-.legal-notice section {
+.legal-page section {
   margin-bottom: 3rem;
 }
 
-.legal-notice h2 {
+.legal-page h2 {
   margin-bottom: 1rem;
 
   font-size: 1.4rem;
@@ -57,10 +57,20 @@
   color: $color-dark;
 }
 
-.legal-notice p {
-  margin-bottom: 1rem;
-
+.legal-page p,
+.legal-page li {
   line-height: 1.8;
 
+  color: $color-text;
+}
+
+.legal-page ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.legal-page__date {
+  margin-top: 4rem;
+
+  font-size: 0.95rem;
   color: $color-text;
 }

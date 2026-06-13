@@ -1,12 +1,13 @@
 import "./Header.scss";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Header() {
   return (
     <header className="header">
       <div className="header__container">
 
-        <a href="#hero" className="header__logo">
-
+        <Link to="/" className="header__logo">
   <span className="header__logo-icon">
     AN
   </span>
@@ -17,19 +18,44 @@ function Header() {
       .dev
     </span>
   </span>
-
-</a>
+</Link>
 
         <nav className="header__nav">
           <ul className="header__menu">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#timeline">Parcours</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+  <HashLink smooth to="/#about">
+    À propos
+  </HashLink>
+</li>
+
+<li>
+  <HashLink smooth to="/#skills">
+    Compétences
+  </HashLink>
+</li>
+
+<li>
+  <HashLink smooth to="/#projects">
+    Projets
+  </HashLink>
+</li>
+
+<li>
+  <HashLink smooth to="/#timeline">
+    Parcours
+  </HashLink>
+</li>
+
+<li>
+  <HashLink smooth to="/#contact">
+    Contact
+  </HashLink>
+</li>
           </ul>
         </nav>
-        <a href="#contact" className="header__cta">Me contacter</a>
+        <HashLink smooth to="/#contact" className="header__cta">
+  Me contacter
+</HashLink>
       </div>
     </header>);}
 

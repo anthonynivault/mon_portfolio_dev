@@ -1,17 +1,17 @@
 import Header from "../components/header/Header";
-import "../styles/Skills.scss";
+import "../styles/HomePage/Skills.scss";
 import Footer from "../components/footer/Footer";
-import "../styles/About.scss";
-import "../styles/Hero.scss";
+import "../styles/HomePage/About.scss";
+import "../styles/HomePage/Hero.scss";
 
 import photo from "../assets/images/anthony.webp";
 
-import "../styles/Projects.scss";
+import "../styles/HomePage/Projects.scss";
 
 import projects from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import "../styles/Timeline.scss";
-import "../styles/Contact.scss";
+import "../styles/HomePage/Timeline.scss";
+import "../styles/HomePage/Contact.scss";
 
 import { Link } from "react-router-dom";
 

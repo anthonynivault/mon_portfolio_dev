@@ -7,6 +7,27 @@ import "../styles/ProjectDetails.scss";
 import InfoCard from "../components/InfoCard/InfoCard";
 import NotFound from "./NotFound";
 
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+
+import { HashLink } from "react-router-hash-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faCircleInfo,
+  faBullseye,
+  faLightbulb,
+  faChartLine,
+} from "@fortawesome/free-solid-svg-icons";
+
 function ProjectDetails() {
   const { slug } = useParams();
 
@@ -19,65 +40,74 @@ function ProjectDetails() {
   }
 
   return (
+    <>
+    <Header />
     <main className="project-details">
 
       <section className="project-hero">
 
-        <div className="project-hero__content">
+  <div className="project-hero__container">
 
-          <Link
-            to="/"
-            className="project-hero__back"
-          >
-            ← Retour à l'accueil
-          </Link>
+    <div className="project-hero__content">
 
-          <div className="project-hero__tags">
-            {project.technologies.map((tech) => (
-              <span key={tech}>
-                {tech}
-              </span>
-            ))}
-          </div>
+      <HashLink
+        smooth
+        to="/#projects"
+        className="project-hero__back"
+      >
+        ← Retour aux projets
+      </HashLink>
 
-          <h1>{project.title}</h1>
+      <h1>{project.title}</h1>
 
-          <p>{project.description}</p>
+      <p>{project.description}</p>
 
-          <div className="project-hero__links">
+     <div className="project-hero__links">
 
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Code source
-            </a>
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noreferrer"
+      className="project-hero__demo"
+    >
+      <FontAwesomeIcon
+        icon={faArrowUpRightFromSquare}
+      />
+      Voir la démo
+    </a>
+  )}
 
-            {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Voir la démo
-              </a>
-            )}
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noreferrer"
+      className="project-hero__github"
+    >
+      <FontAwesomeIcon
+        icon={faGithub}
+      />
+      Code source
+    </a>
+  )}
 
-          </div>
+</div>
 
-        </div>
+    </div>
 
-        <div className="project-hero__image">
+    <div className="project-hero__image">
 
-          <img
-            src={`/images/projects/${project.image}`}
-            alt={project.title}
-          />
+      <img
+        src={`/images/projects/${project.image}`}
+        alt={project.title}
+      />
 
-        </div>
+    </div>
 
-      </section>
+  </div>
+
+</section>
 
       <section className="project-content">
 
@@ -85,78 +115,97 @@ function ProjectDetails() {
 
           <div className="project-content__main">
 
-            <InfoCard title="Contexte">
-              <p>{project.context}</p>
-            </InfoCard>
+           <div className="project-story">
 
-            <InfoCard title="Défi">
-              <p>{project.challenge}</p>
-            </InfoCard>
+  <section className="project-story__section">
 
-            <InfoCard title="Solution">
-              <p>{project.solution}</p>
-            </InfoCard>
+    <div className="project-story__header">
+      <span className="project-story__icon">
+        <FontAwesomeIcon icon={faCircleInfo} />
+      </span>
 
-            <InfoCard title="Résultats">
-              <ul>
-                {project.results.map((result) => (
-                  <li key={result}>
-                    {result}
-                  </li>
-                ))}
-              </ul>
-            </InfoCard>
+      <h2>Contexte</h2>
+    </div>
+
+    <p>{project.context}</p>
+
+  </section>
+
+  <section className="project-story__section">
+
+    <div className="project-story__header">
+      <span className="project-story__icon">
+        <FontAwesomeIcon icon={faBullseye} />
+      </span>
+
+      <h2>Défi</h2>
+    </div>
+
+    <p>{project.challenge}</p>
+
+  </section>
+
+  <section className="project-story__section">
+
+    <div className="project-story__header">
+      <span className="project-story__icon">
+        <FontAwesomeIcon icon={faLightbulb} />
+      </span>
+
+      <h2>Solution</h2>
+    </div>
+
+    <p>{project.solution}</p>
+
+  </section>
+
+  <section className="project-story__section">
+
+    <div className="project-story__header">
+      <span className="project-story__icon">
+        <FontAwesomeIcon icon={faChartLine} />
+      </span>
+
+      <h2>Résultats</h2>
+    </div>
+
+    <ul>
+      {project.results.map((result) => (
+        <li key={result}>
+          {result}
+        </li>
+      ))}
+    </ul>
+
+  </section>
+
+</div>
 
           </div>
 
           <aside className="project-sidebar">
 
-            <InfoCard title="Stack technique">
-              <ul>
-                {project.technologies.map((tech) => (
-                  <li key={tech}>
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </InfoCard>
+           <InfoCard title="Stack technique">
+  <div className="project-sidebar__tags">
+    {project.technologies.map((tech) => (
+      <span key={tech}>
+        {tech}
+      </span>
+    ))}
+  </div>
+</InfoCard>
 
             <InfoCard title="Compétences acquises">
-              <ul>
-                {project.skills.map((skill) => (
-                  <li key={skill}>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </InfoCard>
+  <ul className="project-sidebar__skills">
+    {project.skills.map((skill) => (
+      <li key={skill}>
+        {skill}
+      </li>
+    ))}
+  </ul>
+</InfoCard>
 
-            <InfoCard title="Liens">
-
-              <div className="project-sidebar__links">
-
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Démo
-                  </a>
-                )}
-
-              </div>
-
-            </InfoCard>
-
+           
           </aside>
 
         </div>
@@ -164,6 +213,8 @@ function ProjectDetails() {
       </section>
 
     </main>
+     <Footer />
+  </>
   );
 }
 

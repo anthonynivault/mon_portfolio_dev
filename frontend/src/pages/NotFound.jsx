@@ -1,33 +1,40 @@
 import { Link } from "react-router-dom";
+import Header from "../components/header/Header";
 import "../styles/NotFound.scss";
 
 function NotFound() {
   return (
-    <main className="not-found">
+    <>
 
-      <div className="not-found__content">
+      <Header />
 
-        <h1>404</h1>
+      <main className="not-found">
 
-        <h2>
-          Oups, cette page n'existe pas.
-        </h2>
+        <div className="not-found__content">
 
-        <p>
-          Le projet ou la page que vous recherchez
-          est introuvable.
-        </p>
+          <h1>404</h1>
 
-        <Link
-          to="/"
-          className="not-found__button"
-        >
-          Retour à l'accueil
-        </Link>
+          <h2>
+            Oups, cette page n'existe pas.
+          </h2>
 
-      </div>
+          <p>
+            Le projet ou la page que vous recherchez
+            est introuvable.
+          </p>
 
-    </main>
+          <Link
+            to="/"
+            className="not-found__button"
+          >
+            Retour à l'accueil
+          </Link>
+
+        </div>
+
+      </main>
+
+    </>
   );
 }
 

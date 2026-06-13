@@ -1,12 +1,13 @@
-@use "./variables" as *;
+@use "../variables" as *;
 
-.about {
+.projects {
   padding: 6rem 0;
+
   background: $color-light;
 }
 
-.about__container {
-  max-width: 900px;
+.projects__container {
+  max-width: $container-width;
 
   margin: 0 auto;
   padding: 0 $spacing-lg;
@@ -14,39 +15,38 @@
   text-align: center;
 }
 
-.about__label {
+.projects__label {
   display: block;
 
   margin-bottom: $spacing-sm;
 
   font-size: 0.8rem;
   font-weight: 700;
+
   letter-spacing: 3px;
 
   color: $color-accent;
 }
 
-.about__title {
-  margin-bottom: $spacing-xl;
+.projects__title {
+  margin-bottom: 1rem;
 
   font-size: 2.5rem;
   font-weight: 700;
 
   color: $color-dark;
-
-  line-height: 1.2;
 }
 
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+.projects__subtitle {
+  margin-bottom: 3rem;
 
-  text-align: justify;
-}
-
-.about__content p {
   color: $color-text;
+}
 
-  line-height: 1.8;
+.projects__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
 }

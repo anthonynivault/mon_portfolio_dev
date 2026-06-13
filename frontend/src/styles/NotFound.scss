@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 .not-found {
-  min-height: 100vh;
+  min-height: calc(98vh - 72px);
 
   display: flex;
   justify-content: center;
@@ -10,18 +10,6 @@
   padding: $spacing-lg;
 
   text-align: center;
-
-  background:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(37, 99, 235, 0.12),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(124, 58, 237, 0.12),
-      transparent 40%
-    );
 }
 
 .not-found__content h1 {
