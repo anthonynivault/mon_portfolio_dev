@@ -17,7 +17,7 @@
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: $color-accent;
+    color: $color-accent-dark;;
   }
 
   &__title {
@@ -46,5 +46,23 @@
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .projects {
+    padding: 2.5rem 0;
+  }
+
+  .projects__title {
+    font-size: 2rem;
+  }
+
+  .projects__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
   }
 }

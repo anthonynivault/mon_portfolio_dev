@@ -17,7 +17,7 @@
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: $color-accent;
+    color: $color-accent-dark;
   }
 
   &__title {
@@ -32,7 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    text-align: justify;
+    text-align: left;
 
     p {
       color: $color-text;
@@ -44,5 +44,23 @@
 @media (max-width: $breakpoint-tablet) {
   .about {
     padding: 3rem 0;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .about {
+    padding: 2.5rem 0;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+    text-align: left;
   }
 }

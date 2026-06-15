@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import "./ProjectCard.scss";
@@ -8,21 +8,22 @@ import "./ProjectCard.scss";
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
-      <Link to={`/projets/${project.slug}`} className="project-card__main-link">
-        <img
-          src={`/images/projects/${project.image}`}
-          alt={project.title}
-        />
-      </Link>
-
       <div className="project-card__content">
-        <Link
-          to={`/projets/${project.slug}`}
-          className="project-card__main-link"
-        >
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-        </Link>
+
+  <Link
+    to={`/projets/${project.slug}`}
+    className="project-card__main-link"
+  >
+    <img
+      src={`/images/projects/${project.image}`}
+      alt={`Capture d'écran du projet ${project.title}`}
+      loading="lazy"
+    />
+
+    <h3>{project.title}</h3>
+
+    <p>{project.description}</p>
+  </Link>
 
         <div className="project-card__tags">
           {project.technologies.map((tech) => (
@@ -55,7 +56,7 @@ function ProjectCard({ project }) {
             to={`/projets/${project.slug}`}
             className="project-card__details"
           >
-            Détails <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            Détails <FontAwesomeIcon icon={faArrowRight} />
           </Link>
         </div>
       </div>

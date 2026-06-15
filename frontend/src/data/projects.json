@@ -11,8 +11,6 @@
       "booki.webp"
     ],
 
-    "featured": false,
-
     "description": "Intégration responsive de la page d'accueil d'une plateforme de réservation d'hébergements et d'activités à partir de maquettes Figma.",
 
     "context": "Premier projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était d'intégrer fidèlement une maquette fournie en respectant les contraintes responsive et les bonnes pratiques HTML et CSS.",
@@ -70,8 +68,6 @@
   "gallery": [
     "sophie-bluel.webp"
   ],
-
-  "featured": false,
 
   "description": "Développement d'un portfolio dynamique pour une architecte d'intérieur avec JavaScript et intégration d'une API REST.",
 
@@ -131,8 +127,6 @@
   "gallery": [
     "nina-carducci.webp"
   ],
-
-  "featured": true,
 
   "description": "Optimisation des performances, du SEO et de l'accessibilité d'un site de photographe, avec correction de bugs JavaScript.",
 
@@ -200,8 +194,6 @@
     "kasa.webp"
   ],
 
-  "featured": true,
-
   "description": "Développement d'une application web de location immobilière avec React, React Router et Sass à partir de maquettes Figma.",
 
   "context": "Projet réalisé dans le cadre de la formation Développeur Web OpenClassrooms. L'objectif était de développer le front-end complet d'une plateforme de location immobilière moderne en utilisant React et React Router.",
@@ -267,8 +259,6 @@
   "gallery": [
     "mon-vieux-grimoire.webp"
   ],
-
-  "featured": true,
 
   "description": "Développement d'une API REST sécurisée pour une plateforme de notation de livres avec Node.js, Express et MongoDB.",
 
@@ -341,8 +331,6 @@
   "gallery": [
     "menumaker.webp"
   ],
-
-  "featured": false,
 
   "description": "Planification complète du développement d'une application web de création de menus pour restaurateurs, incluant veille technologique, spécifications techniques et gestion de projet Agile.",
 

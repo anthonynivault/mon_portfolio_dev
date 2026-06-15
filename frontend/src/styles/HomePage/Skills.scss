@@ -17,7 +17,7 @@
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: $color-accent;
+    color: $color-accent-dark;
   }
 
   &__title {
@@ -62,7 +62,7 @@
         left: 0;
         width: 5px;
         height: 5px;
-        background: $color-accent;
+        background: $color-accent-dark;
         border-radius: 50%;
       }
     }
@@ -89,5 +89,32 @@
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .skills {
+    padding: 2.5rem 0;
+  }
+
+  .skills__title {
+    font-size: 2rem;
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__card {
+    padding: $spacing-md;
+  }
+
+  .skills__icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 1rem;
+
+    font-size: 1.25rem;
   }
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faEnvelope,
+  faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 const sectionIds = ["hero", "about", "skills", "projects", "timeline", "contact"];
@@ -17,12 +19,44 @@ const menuItems = [
   { id: "skills", label: "Compétences" },
   { id: "projects", label: "Projets" },
   { id: "timeline", label: "Parcours" },
-  { id: "contact", label: "Contact" },
 ];
 
 function Header() {
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const headerRef = useRef(null);
+
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    }
+
+    if (menuOpen) {
+      document.addEventListener(
+        "mousedown",
+        handleClickOutside
+      );
+    }
+
+    return () => {
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -61,23 +95,28 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className="header">
+    <header className="header"
+      ref={headerRef}>
       <div className="header__container">
-        <Link to="/" className="header__logo">
+        <HashLink smooth to="/#hero" className="header__logo">
           <span className="header__logo-icon">AN</span>
           <span className="header__logo-text">
             Anthony
             <span className="header__logo-dev">.dev</span>
           </span>
-        </Link>
+        </HashLink>
 
-        <nav className="header__nav">
+        <nav className={
+          menuOpen
+          ? "header__nav header__nav--open"
+          : "header__nav"}>
           <ul className="header__menu">
             {menuItems.map(({ id, label }) => (
               <li key={id}>
                 <HashLink
                   smooth
                   to={`/#${id}`}
+                  onClick={() => setMenuOpen(false)}
                   className={
                     activeSection === id
                       ? "header__link header__link--active"
@@ -91,12 +130,32 @@ function Header() {
           </ul>
         </nav>
 
-        <HashLink smooth to="/#contact" className="header__cta">
-          <span className="header__cta-icon">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </span>
-          <span className="header__cta-text">Me contacter</span>
-        </HashLink>
+        <div className="header__actions">
+
+          <button
+            className="header__burger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu de navigation">
+            <FontAwesomeIcon
+              icon={menuOpen ? faXmark : faBars}/>
+          </button>
+
+          <HashLink
+            smooth
+            to="/#contact"
+            className="header__cta"
+            aria-label="Me contacter"
+            onClick={() => setMenuOpen(false)}>
+            <span className="header__cta-icon">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </span>
+
+            <span className="header__cta-text">
+              Me contacter
+            </span>
+          </HashLink>
+
+        </div>
       </div>
     </header>
   );

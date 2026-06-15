@@ -61,7 +61,7 @@ function HomePage() {
             </div>
 
             <div className="hero__visual">
-              <img src={photo} alt="Anthony Nivault" />
+              <img src={photo} alt="Anthony Nivault" fetchPriority="high"/>
 
               <div className="hero__tech-card">
                 <p className="hero__tech-card-main">React • Node.js</p>

@@ -16,7 +16,7 @@
   &__container {
     max-width: $container-width;
     margin: 0 auto;
-    padding: 6rem $spacing-lg;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -187,7 +187,7 @@
         width: 8px;
         height: 8px;
         flex-shrink: 0;
-        background: $color-accent;
+        background: $color-accent-dark;
         border-radius: 50%;
       }
     }
@@ -232,7 +232,6 @@
   p,
   li {
     line-height: 1.8;
-    text-align: justify;
     text-align-last: left;
     color: $color-text;
   }
@@ -243,7 +242,19 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-tablet) {
+  .project-hero__container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero__image {
+    order: 2;
+  }
+
+  .project-hero__content {
+    order: 1;
+  }
+
   .project-content__layout {
     grid-template-columns: 1fr;
   }
