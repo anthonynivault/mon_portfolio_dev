@@ -149,3 +149,13 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .hero {
+    padding: 0rem;
+  }
+
+  .hero__tech-card {
+    right: 19px;
+  }
+}

@@ -81,5 +81,40 @@
     &:hover {
       opacity: 0.9;
     }
+
+    &-icon {
+      display: none;
+      margin-right: $spacing-sm;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header__logo-text {
+    display: none;
+  }
+
+  .header__cta-text {
+    display: none;
+  }
+
+  .header__cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+
+  .header__cta {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

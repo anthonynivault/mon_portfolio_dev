@@ -81,3 +81,13 @@
     border-radius: 16px;
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .skills {
+    padding: 3rem 0;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

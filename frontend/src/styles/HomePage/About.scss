@@ -40,3 +40,9 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .about {
+    padding: 3rem 0;
+  }
+}

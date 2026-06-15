@@ -129,7 +129,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
+  .contact {
+    padding: 3rem 0;
+  }
+
   .contact__row {
     grid-template-columns: 1fr;
   }

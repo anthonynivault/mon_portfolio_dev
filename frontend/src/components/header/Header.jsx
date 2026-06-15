@@ -4,6 +4,12 @@ import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+
 const sectionIds = ["hero", "about", "skills", "projects", "timeline", "contact"];
 
 const menuItems = [
@@ -86,7 +92,10 @@ function Header() {
         </nav>
 
         <HashLink smooth to="/#contact" className="header__cta">
-          Me contacter
+          <span className="header__cta-icon">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </span>
+          <span className="header__cta-text">Me contacter</span>
         </HashLink>
       </div>
     </header>

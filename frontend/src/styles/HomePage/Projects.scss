@@ -38,3 +38,13 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .projects {
+    padding: 3rem 0;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

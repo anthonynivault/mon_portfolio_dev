@@ -74,3 +74,9 @@
     color: $color-accent;
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .timeline {
+    padding: 3rem 0;
+  }
+}

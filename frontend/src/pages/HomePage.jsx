@@ -64,8 +64,8 @@ function HomePage() {
               <img src={photo} alt="Anthony Nivault" />
 
               <div className="hero__tech-card">
-                <p className="hero__tech-main">React • Node.js</p>
-                <p className="hero__tech-secondary">MongoDB • Express</p>
+                <p className="hero__tech-card-main">React • Node.js</p>
+                <p className="hero__tech-card-secondary">MongoDB • Express</p>
               </div>
             </div>
           </div>
