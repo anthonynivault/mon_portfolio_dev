@@ -129,6 +129,19 @@
   }
 }
 
+.contact__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact__status {
+  margin-top: 1rem;
+
+  font-weight: 600;
+
+  color: $color-text;
+}
+
 @media (max-width: $breakpoint-tablet) {
   .contact {
     padding: 3rem 0;

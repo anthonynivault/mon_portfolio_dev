@@ -23,7 +23,38 @@ import "../styles/HomePage/Projects.scss";
 import "../styles/HomePage/Skills.scss";
 import "../styles/HomePage/Timeline.scss";
 
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function HomePage() {
+  const formRef = useRef(null);
+  const [formStatus, setFormStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  setIsSending(true);
+  setFormStatus("");
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setFormStatus("Votre message a bien été envoyé. Je vous répondrai dès que possible.");
+      formRef.current.reset();
+    })
+    .catch(() => {
+      setFormStatus("Une erreur est survenue. Veuillez réessayer.");
+    })
+    .finally(() => {
+      setIsSending(false);
+    });
+}
   return (
     <>
       <Header />
@@ -235,13 +266,18 @@ function HomePage() {
               N'hésitez pas à me contacter.
             </p>
 
-            <form className="contact__form">
+            <form
+                ref={formRef}
+                className="contact__form"
+                onSubmit={handleSubmit}
+            >
               <div className="contact__row">
                 <div className="contact__field">
                   <label htmlFor="name">Nom</label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Votre nom"
                     required
                   />
@@ -252,6 +288,7 @@ function HomePage() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Votre email"
                     required
                   />
@@ -262,6 +299,7 @@ function HomePage() {
                 <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
                   placeholder="Votre message..."
                   required
@@ -269,17 +307,27 @@ function HomePage() {
               </div>
 
               <div className="contact__checkbox">
-                <input type="checkbox" id="privacy" required />
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  required
+                />
                 <label htmlFor="privacy">
                   J'accepte que mes données soient utilisées afin de répondre à
                   ma demande conformément à la{' '}
-                  <Link to="/confidentialite">politique de confidentialité</Link>.
+                  <Link to="/politique-de-confidentialite">politique de confidentialité</Link>.
                 </label>
               </div>
 
-              <button type="submit" className="contact__button">
-                Envoyer le message
+              <button
+                type="submit"
+                className="contact__button"
+                disabled={isSending}
+              >
+                {isSending ? "Envoi en cours..." : "Envoyer le message"}
               </button>
+              {formStatus && <p className="contact__status">{formStatus}</p>}
             </form>
           </div>
         </section>
