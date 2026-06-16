@@ -14,7 +14,7 @@ import Footer from "../components/footer/Footer";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 import projects from "../data/projects.json";
-import photo from "../assets/images/anthony.webp";
+import photo from "../assets/images/Anthony.webp";
 
 import "../styles/HomePage/About.scss";
 import "../styles/HomePage/Contact.scss";
