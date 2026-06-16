@@ -15,10 +15,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/projets/:slug", element: <ProjectDetails /> },
       { path: "/mentions-legales", element: <LegalNotice /> },
-      {
-        path: "/politique-de-confidentialite",
-        element: <PolitiqueConfidentialite />,
-      },
+      {path: "/politique-de-confidentialite", element: <PolitiqueConfidentialite />,},
       { path: "*", element: <NotFound /> },
     ],
   },
